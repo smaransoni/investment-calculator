@@ -1,4 +1,4 @@
-const UserInput = function ({ userInput, onInput }) {
+const UserInput = function ({ input, onChangeInput }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -6,10 +6,11 @@ const UserInput = function ({ userInput, onInput }) {
           <label>Initial Investment</label>
           <input
             type="number"
-            placeholder="Eg: 0-100000000"
             required
-            value={userInput.initialInvestment}
-            onChange={event => onInput('initialInvestment', event.target.value)}
+            value={input.initialInvestment}
+            onChange={event =>
+              onChangeInput('initialInvestment', event.target.value)
+            }
             // minLength="1"
             // maxLength="10"
           ></input>
@@ -18,10 +19,11 @@ const UserInput = function ({ userInput, onInput }) {
           <label>Annual Investment</label>
           <input
             type="number"
-            placeholder="Eg: 0-100000000"
             required
-            value={userInput.annualInvestment}
-            onChange={event => onInput('annualInvestment', event.target.value)}
+            value={input.annualInvestment}
+            onChange={event =>
+              onChangeInput('annualInvestment', event.target.value)
+            }
             // minLength="1"
             // maxLength="10"
           ></input>
@@ -32,20 +34,20 @@ const UserInput = function ({ userInput, onInput }) {
           <label>Expected Return</label>
           <input
             type="number"
-            placeholder="Eg: 0-100000000"
             required
-            value={userInput.expectedReturn}
-            onChange={event => onInput('expectedReturn', event.target.value)}
+            value={input.expectedReturn}
+            onChange={event =>
+              onChangeInput('expectedReturn', event.target.value)
+            }
           ></input>
         </p>
         <p>
           <label>Duration</label>
           <input
             type="number"
-            placeholder="Eg: 0-100000000"
             required
-            value={userInput.duration}
-            onChange={event => onInput('duration', event.target.value)}
+            value={input.duration}
+            onChange={event => onChangeInput('duration', event.target.value)}
           ></input>
         </p>
       </div>
